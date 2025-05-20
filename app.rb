@@ -1,8 +1,7 @@
 require "sinatra"
 require "sinatra/reloader"
 require "dotenv/load"
-require "http"
-require "json"
+
 
 get("/") do
   api_url = "https://api.exchangerate.host/list?access_key=#{ENV.fetch("EXCHANGE_RATE_KEY")}"
